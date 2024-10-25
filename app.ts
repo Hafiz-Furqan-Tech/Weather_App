@@ -19,8 +19,6 @@ async function checkWeather(): Promise<void> {
     }
 
     const data: any = await response.json();
-    console.log(data);
-
 
     // Update the DOM with weather details, using `!` to assure TypeScript elements exist
     document.querySelector(".temp h1")!.innerHTML = `${Math.round(data.main.temp)}°C`;

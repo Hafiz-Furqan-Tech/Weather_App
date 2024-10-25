@@ -25,7 +25,7 @@ function checkWeather() {
                 throw new Error("City not found");
             }
             const data = yield response.json();
-            console.log(data);
+        
             // Update the DOM with weather details, using `!` to assure TypeScript elements exist
             document.querySelector(".temp h1").innerHTML = `${Math.round(data.main.temp)}°C`;
             document.querySelector(".temp p").innerHTML = data.name;
